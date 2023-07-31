@@ -1,5 +1,5 @@
-def tagName = env.tagName;
-def branchName = env.branchName;
+def tagName = "${tagName}" // Accessing environment variable directly without env. prefix
+def branchName = "${branchName}" // Accessing environment variable directly without env. prefix
 
 pipeline {
     agent any // This will run the pipeline on any available agent/node
