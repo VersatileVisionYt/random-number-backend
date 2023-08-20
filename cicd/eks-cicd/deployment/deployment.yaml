@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rng-deployment
+  namespace: rng-dev
+  labels:
+      app: rng
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+          app: rng
+  template:
+    metadata:
+        labels:
+            app: rng
+    spec:
+      containers:
+        - name: rng
+          image: 771128855558.dkr.ecr.us-east-1.amazonaws.com/spring-boot-image-container:latest
