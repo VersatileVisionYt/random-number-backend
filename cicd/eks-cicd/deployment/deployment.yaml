@@ -17,3 +17,8 @@ spec:
       containers:
         - name: rng
           image: 771128855558.dkr.ecr.us-east-1.amazonaws.com/spring-boot-image-container:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8085
+            name: http
+            protocol: TCP
